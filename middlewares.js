@@ -16,7 +16,7 @@ const setup = (app) => {
   ];
   const corsOptions = {
     origin: (origin, callback) => {
-      return whiteList.includes(origin)
+      return !origin || whiteList.includes(origin)
         ? callback(null, true)
         : callback(new Error('Not allowed by CORS'));
     },

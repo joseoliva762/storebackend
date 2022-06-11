@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 middlewares.setup(app);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello World' });
+  res.json({ message: 'server [ON]' });
 });
 
 // routes
